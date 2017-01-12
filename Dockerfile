@@ -1,4 +1,4 @@
-FROM microsoft/dotnet
+FROM microsoft/dotnet:1.0.3-sdk-projectjson
 
 RUN mkdir dotnetapp
 WORKDIR dotnetapp
