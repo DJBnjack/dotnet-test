@@ -4,9 +4,9 @@ RUN mkdir dotnetapp
 WORKDIR dotnetapp
 
 # copy project.json and restore as distinct layers
-COPY project.json dotnetapp
+COPY project.json .
 RUN dotnet restore
 
 # copy and build everything else
-COPY . dotnetapp
+COPY . .
 ENTRYPOINT ["dotnet", "run"]
