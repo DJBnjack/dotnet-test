@@ -9,4 +9,7 @@ RUN dotnet restore
 
 # copy and build everything else
 COPY . .
-ENTRYPOINT ["dotnet", "run"]
+RUN dotnet publish -c Release -o out
+
+#ENTRYPOINT ["dotnet", "run"]
+ENTRYPOINT ["dotnet", "out/dotnetapp.dll"]
